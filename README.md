@@ -10,8 +10,10 @@ In this project, you'll apply what you've learned on data warehouses and AWS to 
 ### Project Solution
 This project was built based on a two-steps etl pipeline:
 
+```
 **Step I**: S3 (json files) >> Redshift (raw)
 **Step II**: Redshift (raw) >> Redshift (dw)
+``` 
 
 In **Step I**, this ETL process the sparkify public stored files in the S3 bucket bellow:
 
