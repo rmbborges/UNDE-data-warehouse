@@ -15,9 +15,11 @@ This project was built based on a two-steps etl pipeline:
 
 In **Step I**, this ETL process the sparkify public stored files in the S3 bucket bellow:
 
+```
 LOG_DATA: 's3://udacity-dend/log_data'
 LOG_JSONPATH: 's3://udacity-dend/log_json_path.json'
 SONG_DATA: 's3://udacity-dend/song_data'
+```
 
 To do so, this ETL execute a `COPY` command, taking advantage of Amazon Redshift parallel data load, and create the staging tables: *staging_events* and *staging_songs*
 Due to the small amount of data, the distribution style chose for the staging tables was `AUTO` (i.e., the default distribution spec of Redshift)  
